@@ -1,0 +1,286 @@
+html,
+body {
+  color: #3e3e3e;
+  margin: 0;
+}
+body > header {
+  background: url('../img/bg-mobile.jpg') no-repeat top center;
+  background-size: auto 300px;
+  margin-bottom: 30px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-cars {
+  width: 454px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.claim-mobile img {
+  max-width: 100%;
+}
+
+.claim-desktop {
+  padding-top: 70px;
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+a {
+  color: #474747;
+}
+
+.show-desktop-inline-block {
+  display: none;
+}
+
+.content {
+  padding: 0 1em;
+}
+
+.counter-title {
+  color: #383838;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.wrapper {
+  display: table;
+  margin: auto;
+}
+
+.main-content-container {
+  display: table-row;
+  vertical-align: middle;
+}
+
+.main-content-container > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.main-content {
+  display: inline-block;
+}
+
+.content-main-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 30px 0;
+  text-align: center;
+}
+
+/* BEGIN countdown */
+#countdown-widget {
+  white-space: nowrap;
+}
+
+.flip-clock-wrapper {
+  width: auto !important;
+}
+
+body.countdown .left-logo img,
+body.countdown .right-logo img {
+  margin-top: 85px;
+}
+/* END countdown */
+
+/* BEGIN login form */
+.input-username,
+.input-password {
+  background: #dedde1;
+  border: 1px solid #dcdcdc;
+  display: block;
+  margin: 16px 0;
+  padding: 16px;
+}
+
+.input-submit {
+  background: #fff;
+  border: 1px solid #fff;
+  border-bottom: 1px solid #ccc;
+  font-weight: 700;
+  padding: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.title-login-form {
+  color: #0379a5;
+}
+/* END login form */
+
+/* BEGIN language choice */
+.title-language-choice {
+  color: #0379a5;
+}
+
+.language-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.language-list li {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 8px;
+  text-transform: uppercase;
+}
+
+.language-list li:after {
+  content: '|';
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.language-list li:last-child:after {
+  display: none;
+}
+/* END language choice */
+
+/* BEGIN footer */
+body > footer {
+  padding-top: 1rem;
+}
+
+body > footer > a {
+  text-decoration: underline;
+}
+
+.logos {
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.logos td {
+  padding: 0px 16px;
+}
+
+.logos .fiat-logo {
+  display: block;
+  height: 40px;
+}
+.logos .border-right {
+  border-right: 1px solid #c5c5c5;
+}
+
+.logos .social-btn {
+  display: inline-block;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  border: 1px solid #c5c5c5;
+}
+
+.facebook-btn {
+  background: url('../img/facebook-black.svg') no-repeat center center;
+}
+
+.twitter-btn {
+  background: url('../img/twitter-black.svg') no-repeat center center;
+}
+
+.youtube-btn {
+  background: url('../img/youtube-black.svg') no-repeat center center;
+}
+
+.footer-links {
+  font-size: .8em;
+  text-align: center;
+}
+
+.footer-links p a {
+  margin-right: 8px;
+}
+
+.footer-copy {
+  font-weight: 700;
+  font-size: .9em;
+}
+/* END footer */
+
+/* desktop */
+@media only screen and (min-width: 1024px) {
+  body > header {
+    background: url('../img/bg-mobile.jpg') no-repeat top center;
+    background-size: auto auto;
+    margin-bottom: 30px;
+  }
+
+  .bg-cars {
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .claim-mobile {
+    display: none;
+  }
+
+  .claim-desktop {
+    display: block;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .bg-mobile {
+    display: none;
+  }
+
+  .content {
+    padding-bottom: 180px;
+  }
+
+  body.countdown .content {
+    background: url('../img/bg_flip.png') no-repeat center 30px;
+    background-size: 600px;
+  }
+
+  .show-desktop-inline-block {
+    display: inline-block;
+  }
+
+  body > footer {
+    border-top: 2px solid #a36c7d;
+  }
+
+  body > footer:after {
+    content: '';
+    clear: both;
+  }
+
+  .footer-logos {
+    float: right;
+  }
+
+  .footer-links {
+    float: left;
+    text-align: left;
+  }
+
+  body > footer > div {
+    margin: auto;
+    width: 80%;
+  }
+}
