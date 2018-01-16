@@ -2,27 +2,33 @@ var App = function () {
   this.init = function (rootElement) {
     this.rootElement = $(rootElement);
     this.storage = window.localStorage;
+    this.liveEndTime = 1516358800000;
     this.difference = 1516357800000 - new Date().getTime();
-    // this.difference = 151602945330 - new Date().getTime();
+    // this.difference = new Date().getTime() + 68000 - new Date().getTime();
     this.render();
 
     // @FIXME ŖEMOVEME
+    /*
     var self = this;
     $('.footer-copy').on('click', function () {
       self.renderLoginForm();
     })
+    */
   }
 
   this.render = function () {
-    console.log(this.difference);
-    if (this.difference > 0) {
+    if (new Date().getTime() > this.liveEndTime) {
+      location.href = 'ondemand.html';
+    } else if (this.difference > 0) {
       this.renderCountdown()
-    } else if (this.storage.getItem('authenticated')) {
+    } else {
+      location.href = 'live.html';
+    }/* else if (this.storage.getItem('authenticated')) {
       this.renderLanguageChoice();
     } else {
       this.localStorage.clear();
       this.renderLoginForm()
-    }
+      }*/
   }
 
   this.renderCountdown = function () {
@@ -36,7 +42,8 @@ var App = function () {
       countdown: true,
       showSeconds: false,
       stop: function () {
-        self.renderLoginForm();
+        location.href='live.html';
+        // self.renderLoginForm();
       }
     });
   }

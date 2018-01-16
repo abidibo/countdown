@@ -1,0 +1,11 @@
+.modal-backdrop {
+  background-color: #fff;
+}
+.modal-backdrop.show {
+  opacity: .8;
+}
+.modal-content {
+  border-radius: 0;
+  border: 0px solid;
+  border-top: 5px solid #B30F3F;
+}

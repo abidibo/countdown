@@ -1,0 +1,85 @@
+/* BEGIN footer */
+body > footer {
+  padding-top: 1rem;
+}
+
+body > footer > a {
+  text-decoration: underline;
+}
+
+.logos {
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.logos td {
+  padding: 0px 16px;
+}
+
+.logos .fiat-logo {
+  display: block;
+  height: 40px;
+}
+.logos .border-right {
+  border-right: 1px solid #c5c5c5;
+}
+
+.logos .social-btn {
+  display: inline-block;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  border: 1px solid #c5c5c5;
+}
+
+.facebook-btn {
+  background: url('../img/facebook-black.png') no-repeat center center;
+}
+
+.twitter-btn {
+  background: url('../img/twitter-black.png') no-repeat center center;
+}
+
+.youtube-btn {
+  background: url('../img/youtube-black.png') no-repeat center center;
+}
+
+.footer-links {
+  font-size: .8em;
+  text-align: center;
+}
+
+.footer-links p a {
+  margin-right: 8px;
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-weight: 700;
+  font-size: .9em;
+}
+
+@media only screen and (min-width: 1024px) {
+  body > footer {
+    border-top: 2px solid #ca3159;
+  }
+
+  body > footer:after {
+    content: '';
+    clear: both;
+  }
+
+  .footer-logos {
+    float: right;
+  }
+
+  .footer-links {
+    float: left;
+    text-align: left;
+  }
+
+  body > footer > div {
+    margin: auto;
+    width: 80%;
+  }
+}

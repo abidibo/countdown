@@ -5,21 +5,29 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style-live.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,800" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://clp.gaiareply.eu/CookieLawProduct/resources/generatecss?key=1526">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script
 			  src="https://code.jquery.com/jquery-2.2.4.min.js"
 			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 			  crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+    <script src="js/app-live.js"></script>
     <script>
       jQuery(document).ready(function () {
-        var app = new App();
-        app.init('#main-content');
+        var app = new AppLive();
+        app.init();
       })
     </script>
+    <!-- Cookie -->
     <script type="text/javascript" src="https://clp.gaiareply.eu/CookieLawProduct/resources/generatejs?key=1526"></script> 
+    <!-- Player -->
+    <script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
+    <script type="text/javascript">jwplayer.key = "O8uLOTVHLRiOLoZJ6qgPRJi0blQaVJ3xcVxG3vDTZQc=";</script>
     <!-- Matomo -->
     <script type="text/javascript">
       var _paq = _paq || [];
@@ -39,5 +47,158 @@
     <!-- End Matomo Code -->
   </head>
   <body>
+    <header>
+      <div class="mobile-only">
+        <table>
+          <tr>
+            <td class="text-right">
+              <img src="./img/logo-mirror.png" class="img-fluid" />
+            </td>
+            <td>
+              <h1 class="letter-spacing">500 Mirror Family<br />Press Conference</h1>
+              <div class="text-center"><i style="color: #1DA1F2" class="fa fa-twitter"></i> <b># 500Mirror</b></div>
+            </td>
+            <td>
+              <img src="./img/logo-fiat.png" class="img-fluid" />
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="desktop-only">
+        <table>
+          <tr>
+            <td class="text-right">
+              <img src="./img/logo-fiat.png" class="img-fluid" />
+            </td>
+            <td class="border-vertical">
+              <h1 class="letter-spacing">500 Mirror Family Press Conference</h1>
+            </td>
+            <td>
+              <i style="color: #1DA1F2" class="fa fa-twitter"></i> <b># 500Mirror</b>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </header>
+    <nav class="desktop-only navbar">
+      <ul>
+        <li>Web Press Conference</li>
+        <li>Download your press kit</li>
+      </ul>
+    </nav>
+    <div class="live-player">
+      <div id='mediaspace'></div>
+      <script type="text/javascript">
+          // height: "540",
+          var match = window.location.search.match(/lng=([^&]+)/);
+          var lng = match && match.length > 1 ? match[1] : 'en';
+          console.log('YOUR LANGUAGE: ' + lng);
+          jwplayer("mediaspace").setup({
+          width: "100%",
+          abouttext: "Powered By FeedbackItalia",
+          "playlist": [
+              {
+                  "sources": [
+                      {
+                          "default": false,
+                          // "file": "https://feedbackitalia-lh.akamaihd.net/i/StreamIT_1@74792/master.m3u8",
+                          "file": "https://content.jwplatform.com/manifests/yp34SRmf.m3u8",
+                          "type": "hls",
+                          "label": "0",
+                          "preload": "metadata"
+                      }
+                  ],
+                  mediaid: "s6hRjMKQ",
+                  "title": "Video <LANG>",
+                  piwikResource: "trackURL.mp4.m3u8"
+              }
+          ],
+          "primary": "html5",
+          "hlshtml": true,
+          "autostart": true,
+      });
+      </script>
+    </div>
+    <div class="choose-language">
+      <ul>
+        <li><a href="live.html?lng=ita">ita</a></li>
+        <li><a href="live.html?lng=en">en</a></li>
+        <li><a href="live.html?lng=fr">fr</a></li>
+      </ul>
+    </div>
+    <div class="press-kit">
+      <p>
+        <a href="javascript:void(0)" data-toggle="modal" data-target="#pressKitModal" class="press-kit-btn letter-spacing">Download press kit</a>
+      </p>
+      <div class="modal fade" id="pressKitModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p class="text-center"><img style="height: 65px;" src="./img/logo-fiat.png" alt="" /></p>
+              <table class="table text-left press-kit-download-items">
+                <tr>
+                  <td style="width: 50px;"><img src="./img/download-doc.png" /></td>
+                  <td>Maramao</td>
+                  <td><input data-url="url1" type="checkbox" checked /></td>
+                </tr>
+                <tr>
+                  <td style="width: 50px;"><img src="./img/download-photo.png" /></td>
+                  <td>Super foto</td>
+                  <td><input data-url="url2" type="checkbox" checked /></td>
+                </tr>
+                <tr>
+                  <td style="width: 50px;"><img src="./img/download-video.png" /></td>
+                  <td>Super video</td>
+                  <td><input data-url="url3" type="checkbox" checked /></td>
+                </tr>
+              </table>
+              <p class="text-center">
+                <a class="btn btn-custom" id="press-kit-download-all" href="javascript:void(0)">Download all</a>
+                <a class="btn btn-custom" id="press-kit-download-selected" href="javascript:void(0)">Download selection</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="live-comment letter-spacing">
+      <h2 class="letter-spacing">Have your say</h2>
+      <p class="text-center mb-4">
+        <textarea name="" placeholder="#iLove500Mirror"></textarea>
+      </p>
+      <p class="text-center">
+        <input type="button" class="input-submit" value="submit">
+      </p>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="footer-logos">
+          <table class="logos">
+            <tr>
+              <td class="border-right">
+                <a href="http://www.fiat.com/" target="_blank">
+                  <img src="img/logo-fiat-40.png" class="fiat-logo" />
+                </a>
+              </td>
+              <td>
+                <a target="blank" href="https://www.facebook.com/Fiat/?fref=ts" class="social-btn facebook-btn"><a>
+                <a target="blank" href="https://twitter.com/fiatontheweb" class="social-btn twitter-btn"><a>
+                <a target="blank" href="https://www.youtube.com/user/fiatontheweb" class="social-btn youtube-btn"><a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="footer-links">
+          <p>
+          <a href="http://www.fiatpress.com/info/privacy">Privacy Policy</a>
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#cookieModal">Cookie Policy</a>
+          <a href=http://www.fiatpress.com/info/privacy"">Legal Notes</a>
+          </p>
+          <p class="footer-copy">
+          © 2018 Fiat Chrysler Automobiles N.V.
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

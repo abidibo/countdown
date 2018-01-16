@@ -519,7 +519,7 @@ var FlipClock;
 		 */
 
 		decrement: function() {
-      if(this.factory.time.getTimeSeconds() == 60) { // reset at 1 minute
+      if(this.factory.time.getTimeSeconds() <= 60) { // reset at 1 minute
 	        	this.factory.stop()
 			}
 			else {

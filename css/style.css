@@ -90,14 +90,6 @@ a {
   text-align: center;
 }
 
-.left-logo {
-  padding-right: 50px;
-}
-
-.right-logo {
-  padding-left: 50px;
-}
-
 /* BEGIN countdown */
 #countdown-widget {
   white-space: nowrap;
@@ -207,68 +199,6 @@ body.login-form .main-content {
 }
 /* END language choice */
 
-/* BEGIN footer */
-body > footer {
-  padding-top: 1rem;
-}
-
-body > footer > a {
-  text-decoration: underline;
-}
-
-.logos {
-  margin: auto;
-  margin-bottom: 40px;
-}
-
-.logos td {
-  padding: 0px 16px;
-}
-
-.logos .fiat-logo {
-  display: block;
-  height: 40px;
-}
-.logos .border-right {
-  border-right: 1px solid #c5c5c5;
-}
-
-.logos .social-btn {
-  display: inline-block;
-  height: 38px;
-  width: 38px;
-  border-radius: 50%;
-  border: 1px solid #c5c5c5;
-}
-
-.facebook-btn {
-  background: url('../img/facebook-black.png') no-repeat center center;
-}
-
-.twitter-btn {
-  background: url('../img/twitter-black.png') no-repeat center center;
-}
-
-.youtube-btn {
-  background: url('../img/youtube-black.png') no-repeat center center;
-}
-
-.footer-links {
-  font-size: .8em;
-  text-align: center;
-}
-
-.footer-links p a {
-  margin-right: 8px;
-  text-decoration: underline;
-}
-
-.footer-copy {
-  font-weight: 700;
-  font-size: .9em;
-}
-/* END footer */
-
 /* desktop */
 @media only screen and (min-width: 1024px) {
   body > header {
@@ -313,26 +243,11 @@ body > footer > a {
     display: inline-block;
   }
 
-  body > footer {
-    border-top: 2px solid #ca3159;
+  .left-logo {
+    padding-right: 50px;
   }
 
-  body > footer:after {
-    content: '';
-    clear: both;
-  }
-
-  .footer-logos {
-    float: right;
-  }
-
-  .footer-links {
-    float: left;
-    text-align: left;
-  }
-
-  body > footer > div {
-    margin: auto;
-    width: 80%;
+  .right-logo {
+    padding-left: 50px;
   }
 }
