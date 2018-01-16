@@ -6,8 +6,9 @@ var AppLive = function () {
   }
 
   this.checkLiveEnd = function () {
+    var self = this;
     var checkEnd = function () {
-      if (new Date().getTime() > this.liveEndTime) {
+      if (new Date().getTime() > self.liveEndTime) {
         location.href = 'ondemand.html';
       }
     }

@@ -7,6 +7,10 @@ body > footer > a {
   text-decoration: underline;
 }
 
+.cl-policy-link {
+  display: inline-block !important;
+}
+
 .logos {
   margin: auto;
   margin-bottom: 40px;
