@@ -13,6 +13,10 @@ body {
   font-family: 'Open Sans', sans-serif !important;
 }
 
+.force-display {
+  display: block !important;
+}
+
 .text-center {
   text-align: center;
 }
@@ -130,6 +134,11 @@ body.countdown .right-logo img {
   text-align: center;
   text-transform: uppercase;
   width: 100%;
+}
+
+.login-form-error {
+  color: red;
+  display: none;
 }
 
 .input-submit:hover {
