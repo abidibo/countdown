@@ -86,6 +86,14 @@ a {
   text-align: center;
 }
 
+.left-logo {
+  padding-right: 50px;
+}
+
+.right-logo {
+  padding-left: 50px;
+}
+
 /* BEGIN countdown */
 #countdown-widget {
   white-space: nowrap;
@@ -109,12 +117,14 @@ body.countdown .right-logo img {
   display: block;
   margin: 16px 0;
   padding: 16px;
+  min-width: 280px;
 }
 
 .input-submit {
   background: #fff;
   border: 1px solid #fff;
   border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
   font-weight: 700;
   padding: 16px;
   text-align: center;
@@ -122,8 +132,40 @@ body.countdown .right-logo img {
   width: 100%;
 }
 
+.input-submit:hover {
+  background: #f7f7f7;
+}
+
 .title-login-form {
   color: #0379a5;
+}
+
+.input-username-wrapper,
+.input-password-wrapper {
+  position: relative;
+}
+
+.input-username-wrapper:after,
+.input-password-wrapper:after {
+  content: '';
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 22px;
+  right: 14px;
+}
+
+.input-username-wrapper:after {
+  background: url('../img/username.png') no-repeat center center;
+}
+
+.input-password-wrapper:after {
+  background: url('../img/password.png') no-repeat center center;
+}
+
+body.login-form .main-content {
+  padding-bottom: 30px;
 }
 /* END login form */
 
@@ -209,6 +251,7 @@ body > footer > a {
 
 .footer-links p a {
   margin-right: 8px;
+  text-decoration: underline;
 }
 
 .footer-copy {
@@ -241,7 +284,7 @@ body > footer > a {
   }
 
   .mobile-only {
-    display: none;
+    display: none !important;
   }
 
   .bg-mobile {

@@ -1,8 +1,8 @@
 var App = function () {
   this.init = function (rootElement) {
     this.rootElement = $(rootElement);
-    this.difference = 1516357800000 - new Date().getTime();
-    // this.difference = 1516029453330 - new Date().getTime();
+    // this.difference = 1516357800000 - new Date().getTime();
+    this.difference = 151602945330 - new Date().getTime();
     this.render();
   }
 
@@ -10,6 +10,8 @@ var App = function () {
     console.log(this.difference);
     if (this.difference > 0) {
       this.renderCountdown()
+    } else {
+      this.renderLoginForm()
     }
   }
 
@@ -33,9 +35,13 @@ var App = function () {
     $(document.body).attr('class', 'login-form');
     this.rootElement.empty();
     var title = $('<div />', {'class': 'content-main-title title-login-form'}).html('Sign in');
-    var usernameField = $('<input />', {'class': 'input-username', placeholder: 'Username'})
-    var passwordField = $('<input />', {'class': 'input-password', type: 'password', placeholder: 'Password'})
-    var submitField = $('<input />', {'class': 'input-submit', type: 'button', value: 'Submit'})
+    var usernameField = $('<div />', {'class': 'input-username-wrapper'}).append(
+      $('<input />', {'class': 'input-username', placeholder: 'Username'})
+    );
+    var passwordField = $('<div />', {'class': 'input-password-wrapper'}).append(
+      $('<input />', {'class': 'input-password', type: 'password', placeholder: 'Password'})
+    );
+    var submitField = $('<input />', {'class': 'input-submit', type: 'button', value: 'Submit'});
 
     $('#main-content').append([
       title,
