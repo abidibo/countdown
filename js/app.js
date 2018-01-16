@@ -79,7 +79,7 @@ var App = function () {
     var title = $('<div />', {'class': 'content-main-title title-language-choice'}).html('Choose your language');
     var list = $('<ul />', {'class': 'language-list'});
     $.each(['ita', 'en', 'fr', 'de', 'es'], function (k, lng) {
-      var item = $('<li />').html(lng).appendTo(list);
+      var item = $('<li />').html('<a href="#">' + lng + '</a>').appendTo(list);
     });
     $('#main-content').append([
       title,

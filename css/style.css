@@ -242,15 +242,15 @@ body > footer > a {
 }
 
 .facebook-btn {
-  background: url('../img/facebook-black.svg') no-repeat center center;
+  background: url('../img/facebook-black.png') no-repeat center center;
 }
 
 .twitter-btn {
-  background: url('../img/twitter-black.svg') no-repeat center center;
+  background: url('../img/twitter-black.png') no-repeat center center;
 }
 
 .youtube-btn {
-  background: url('../img/youtube-black.svg') no-repeat center center;
+  background: url('../img/youtube-black.png') no-repeat center center;
 }
 
 .footer-links {
