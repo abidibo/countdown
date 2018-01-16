@@ -19,7 +19,11 @@
 			  crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script> 
+    <script type="text/javascript" src="js/modal.js"></script> 
     <script type="text/javascript" src="https://clp.gaiareply.eu/CookieLawProduct/resources/generatejs?key=1989"></script> 
+    <!-- Player -->
+    <script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
+    <script type="text/javascript">jwplayer.key = "O8uLOTVHLRiOLoZJ6qgPRJi0blQaVJ3xcVxG3vDTZQc=";</script>
     <!-- Matomo -->
     <script type="text/plain" class="cl-onconsent-inline-performance">
       var _paq = _paq || [];
@@ -43,7 +47,7 @@
       <div class="desktop-only">
         <p>Carousel</p>
         <div class="video-carousel">
-          <div><img src="./img/movie_placeholder.jpg" /></div>
+          <div><img onclick="var modal = new VideoModal('https://d1p4giye8wmv26.cloudfront.net/vari/AdrenalineRush.mp4'); modal.open()" src="./img/movie_placeholder.jpg" /></div>
           <div><img src="./img/movie_placeholder.jpg" /></div>
           <div><img src="./img/movie_placeholder.jpg" /></div>
           <div><img src="./img/movie_placeholder.jpg" /></div>
@@ -73,5 +77,23 @@
         <div><img src="./img/movie_placeholder.jpg" /></div>
       </div>
     </div>
+    <section id="dynamicModal" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h1 class="modal-title"></h1>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+            <button type="button" class="btn btn-primary btn-action">Salva</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </section><!-- /.modal -->
   </body>
 </html>
