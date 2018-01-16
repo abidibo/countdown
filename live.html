@@ -6,10 +6,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style-live.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <link rel="stylesheet" type="text/css" href="css/modal.css" />
     <link rel="stylesheet" type="text/css" href="css/footer.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,800" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://clp.gaiareply.eu/CookieLawProduct/resources/generatecss?key=1526">
+    <link rel="stylesheet" type="text/css" href="https://clp.gaiareply.eu/CookieLawProduct/resources/generatecss?key=1989">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script
 			  src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -24,7 +25,7 @@
       })
     </script>
     <!-- Cookie -->
-    <script type="text/javascript" src="https://clp.gaiareply.eu/CookieLawProduct/resources/generatejs?key=1526"></script> 
+    <script type="text/javascript" src="https://clp.gaiareply.eu/CookieLawProduct/resources/generatejs?key=1989"></script> 
     <!-- Player -->
     <script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
     <script type="text/javascript">jwplayer.key = "O8uLOTVHLRiOLoZJ6qgPRJi0blQaVJ3xcVxG3vDTZQc=";</script>
@@ -101,15 +102,15 @@
                   "sources": [
                       {
                           "default": false,
-                          // "file": "https://feedbackitalia-lh.akamaihd.net/i/StreamIT_1@74792/master.m3u8",
-                          "file": "https://content.jwplatform.com/manifests/yp34SRmf.m3u8",
+                          "file": "https://feedbackitalia-lh.akamaihd.net/i/Stream" + lng.toUpperCase() + "_1@74792/master.m3u8",
+                          // "file": "https://content.jwplatform.com/manifests/yp34SRmf.m3u8",
                           "type": "hls",
                           "label": "0",
                           "preload": "metadata"
                       }
                   ],
                   mediaid: "s6hRjMKQ",
-                  "title": "Video <LANG>",
+                  "title": "Video Live " + lng.toUpperCase(),
                   piwikResource: "trackURL.mp4.m3u8"
               }
           ],
@@ -121,7 +122,7 @@
     </div>
     <div class="choose-language">
       <ul>
-        <li><a href="live.html?lng=ita">ita</a></li>
+        <li><a href="live.html?lng=it">ita</a></li>
         <li><a href="live.html?lng=en">en</a></li>
         <li><a href="live.html?lng=fr">fr</a></li>
       </ul>

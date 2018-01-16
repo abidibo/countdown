@@ -1,0 +1,27 @@
+.slick-arrow {
+  display: inline-block;
+  width: 11px;
+  height: 33px;
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+}
+.slick-prev {
+  background: url(../img/prev.png) no-repeat center center;
+  left: -20px
+}
+
+.slick-next {
+  background: url(../img/next.png) no-repeat center center;
+  right: 0px;
+}
+
+.slick-slide img {
+  width: 290px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .slick-slide img {
+    width: 352px;
+  }
+}

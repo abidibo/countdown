@@ -222,10 +222,6 @@ body.login-form .main-content {
     display: block;
   }
 
-  .mobile-only {
-    display: none !important;
-  }
-
   .bg-mobile {
     display: none;
   }
