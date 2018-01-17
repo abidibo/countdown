@@ -1,3 +1,9 @@
+.cl-policy.close {
+  font-size: 13px;
+  float: none;
+  opacity: 1;
+}
+
 .desktop-only {
   display: none;
 }

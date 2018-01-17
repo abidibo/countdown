@@ -1,7 +1,7 @@
 var appConfig = {};
 (function () {
   // debug purposes
-  var DEBUG = /DEBUG/.test(location.hash);
+  var DEV = /DEV/.test(location.hash);
 
   // var liveBeginUTC = 1516357800000;
   appConfig.countdownEndUTC = 1516262458000;
@@ -11,7 +11,7 @@ var appConfig = {};
   var isOnDemand = /ondemand/.test(location.pathname);
   var isLive = /live/.test(location.pathname);
 
-  if (!DEBUG) {
+  if (!DEV) {
     if (new Date().getTime() > appConfig.liveEndUTC && !isOnDemand) {
       location.href = 'ondemand.hmtl';
     } else if (new Date().getTime() > appConfig.countdownEndUTC && !isLive) {
