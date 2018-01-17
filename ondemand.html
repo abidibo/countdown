@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>500 Mirror Family Press COnference</title>
+    <title>The new FIAT 500 Mirror Family Press Conference</title>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="apple-touch-icon-precomposed" href="favicon.ico">
+    <link rel="icon" href="favicon.ico">
+    <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="favicon.ico">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style-ondemand.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <link rel="stylesheet" type="text/css" href="css/modal.css" />
     <link rel="stylesheet" type="text/css" href="css/footer.css" />
-    <link rel="stylesheet" type="text/css" href="css/flipclock.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,800" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://clp.gaiareply.eu/CookieLawProduct/resources/generatecss?key=1989">
+    <link rel="stylesheet" type="text/css" href="https://cookielaw.emea.fcagroup.com/CookieLawProduct/resources/generatecss?key=1989">
     <script
 			  src="https://code.jquery.com/jquery-2.2.4.min.js"
 			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 			  crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script> 
-    <script type="text/javascript" src="js/redirect.js"></script> 
-    <script type="text/javascript" src="js/modal.js"></script> 
-    <script type="text/javascript" src="https://clp.gaiareply.eu/CookieLawProduct/resources/generatejs?key=1989"></script> 
+    <script src="js/redirect.js"></script>
+    <script src="js/app-ondemand.js"></script>
+    <script>
+      jQuery(document).ready(function () {
+        var app = new AppOnDemand();
+        app.init();
+      })
+    </script>
+    <!-- Cookie -->
+    <script type="text/javascript" src="https://cookielaw.emea.fcagroup.com/CookieLawProduct/resources/generatejs?key=1989"></script> 
     <!-- Player -->
     <script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
     <script type="text/javascript">jwplayer.key = "O8uLOTVHLRiOLoZJ6qgPRJi0blQaVJ3xcVxG3vDTZQc=";</script>
@@ -44,57 +53,200 @@
     <!-- End Matomo Code -->
   </head>
   <body>
-    <div class="container">
-      <div class="desktop-only">
-        <p>Carousel</p>
-        <div class="video-carousel">
-          <div><img onclick="var modal = new VideoModal('https://d1p4giye8wmv26.cloudfront.net/vari/AdrenalineRush.mp4'); modal.open()" src="./img/movie_placeholder.jpg" /></div>
-          <div><img src="./img/movie_placeholder.jpg" /></div>
-          <div><img src="./img/movie_placeholder.jpg" /></div>
-          <div><img src="./img/movie_placeholder.jpg" /></div>
-          <div><img src="./img/movie_placeholder.jpg" /></div>
-          <div><img src="./img/movie_placeholder.jpg" /></div>
-          <div><img src="./img/movie_placeholder.jpg" /></div>
-        </div>
-        <script>
-          $(document).ready(function(){
-            $('.video-carousel').slick({
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              adaptiveHeight: true,
-              prevArrow: '<span class="slick-arrow slick-prev"></span>',
-              nextArrow: '<span class="slick-arrow slick-next"></span>'
-            });
-          });
-        </script>
-      </div>
+    <header>
       <div class="mobile-only">
-        <div><img src="./img/movie_placeholder.jpg" /></div>
-        <div><img src="./img/movie_placeholder.jpg" /></div>
-        <div><img src="./img/movie_placeholder.jpg" /></div>
-        <div><img src="./img/movie_placeholder.jpg" /></div>
-        <div><img src="./img/movie_placeholder.jpg" /></div>
-        <div><img src="./img/movie_placeholder.jpg" /></div>
-        <div><img src="./img/movie_placeholder.jpg" /></div>
+        <table>
+          <tr>
+            <td class="text-right">
+              <img src="./img/logo-mirror.png" class="img-fluid" />
+            </td>
+            <td>
+              <h1 class="letter-spacing">The new FIAT 500 Mirror Family<br />Press Conference</h1>
+              <table class="hash-tags">
+                <tr>
+                  <td><b>#Fiat500</b></td>
+                  <td class="text-center"><b>#Fiat500X</b></td>
+                  <td class="text-right"><b>#Fiat500L</b></td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <img src="./img/logo-fiat.png" class="img-fluid" />
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="desktop-only">
+        <table>
+          <tr>
+            <td class="text-right">
+              <img src="./img/logo-fiat.png" class="img-fluid" />
+            </td>
+            <td class="border-vertical">
+              <h1 class="letter-spacing">The new FIAT 500 Mirror Family Press Conference</h1>
+            </td>
+            <td>
+              <div class="hash-tags">
+                <b class="d-block">#Fiat500</b>
+                <b class="d-block">#Fiat500X</b>
+                <b class="d-block">#Fiat500L</b>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </header>
+    <div class="live-player">
+      <h2 class="text-center desktop-only uppercase">The new FIAT 500 Mirror Family</h2>
+      <div id='mediaspace'></div>
+      <script type="text/javascript">
+        var playerWidth, playerHeight;
+        var match = window.location.search.match(/lng=([^&]+)/);
+        var lng = match && match.length > 1 ? match[1] : 'it';
+
+        var scalePlayer = function () {
+          var vpWidth = parseInt($(window).width());
+
+          // 960*540
+          if (vpWidth < 1024) {
+            playerWidth = vpWidth;
+            playerHeight = Math.round(playerWidth/960 * 540);
+          } else {
+            playerWidth = 960;
+            playerHeight = 540;
+          }
+          jwplayer('mediaspace').resize(playerWidth, playerHeight);
+        }
+
+        jwplayer("mediaspace").setup({
+          abouttext: "Powered By FeedbackItalia",
+          "playlist": [
+            {
+                "sources": [
+                    {
+                        "default": false,
+                        "file": "https://d1p4giye8wmv26.cloudfront.net/vari/AdrenalineRush.mp4?" + lng.toUpperCase(),
+                        // "file": "https://content.jwplatform.com/manifests/yp34SRmf.m3u8",
+                        "type": "mp4",
+                        "label": "0",
+                        "preload": "metadata"
+                    }
+                ],
+                mediaid: "s6hRjMKQ",
+                "title": "Video OnDemand " + lng.toUpperCase(),
+                piwikResource: "trackURL.mp4.m3u8"
+            }
+          ],
+          "primary": "html5",
+          "hlshtml": true,
+          "autostart": true,
+          "repeat": true
+        });
+
+        $(window).on('resize', scalePlayer);
+        scalePlayer();
+
+      </script>
+    </div>
+    <div class="choose-language">
+      <h2 class="letter-spacing uppercase text-center mt-4 mb-4 pb-2">Select your language</h2>
+      <div>
+        <ul>
+          <li class="lng-it"><a href="live.html?lng=it"><img src="./img/it.png" alt="it" /></a></li>
+          <li class="lng-en"><a href="live.html?lng=en"><img src="./img/uk.png" alt="en" /></a></li>
+          <li class="lng-de"><a href="live.html?lng=de"><img src="./img/de.png" alt="de" /></a></li>
+          <li class="lng-fr"><a href="live.html?lng=fr"><img src="./img/fr.png" alt="fr" /></a></li>
+          <li class="lng-es"><a href="live.html?lng=es"><img src="./img/es.png" alt="es" /></a></li>
+        </ul>
       </div>
     </div>
-    <section id="dynamicModal" class="modal fade">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h1 class="modal-title"></h1>
-          </div>
-          <div class="modal-body">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-            <button type="button" class="btn btn-primary btn-action">Salva</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </section><!-- /.modal -->
+    <div class="press-kit">
+      <p><a class="press-kit-btn letter-spacing" href="http://www.fiatpress.com/welcome.php?lng=2" target="_blank">Get your press kit here</a></p>
+    </div>
+    <div class="live-comment letter-spacing">
+      <h2 class="letter-spacing uppercase">Please fill in the form below</h2>
+      <p class="text-center mb-4">
+        <input type="text" placeholder="Name" id="id-name" />
+      </p>
+      <p class="text-center mb-4">
+        <input type="text" placeholder="Magazine" id="id-magazine" />
+      </p>
+      <p class="text-center">
+        <input type="button" class="input-submit" value="submit" id="send-form" />
+      </p>
+    </div>
+    <div class="discover hidden">
+      <h2 class="letter-spacing uppercase text-center mb-4 pb-2">Discover more about commercial offer available in your market</h2>
+      <p class="offer-links">
+        <span>
+          <a target="_blank" href="http://dpromo.fiat.it/500MirrorFamily" class="uppercase letter-spacing">Italy</a>
+        </span>
+        <span>
+          <a target="_blank" href="http://epromo.fiat.com/FR_Famille500Mirror" class="uppercase letter-spacing">France</a>
+        </span>
+        <span>
+          <a target="_blank" href="http://dpromo.fiat.co.uk/500MirrorFamily" class="uppercase letter-spacing">UK</a>
+        </span>
+        <span>
+          <a target="_blank" href="http://dpromo.fiat.com/DE_500MirrorFamily" class="uppercase letter-spacing">Germany</a>
+        </span>
+        <span>
+          <a target="_blank" href="http://gamamirror.fiat.es" class="uppercase letter-spacing">Spain</a>
+        </span>
+        <span>
+          <a target="_blank" href="http://epromo.fiat.com/NL_500MirrorFamily" class="uppercase letter-spacing">Netherlands</a>
+        </span>
+      </p>
+      <p class="offer-links">
+        <span>
+          <a target="_blank" href="http://epromo.fiat.com/LUX_500MirrorFamily" class="uppercase letter-spacing">Luxembourg</a>
+        </span>
+        <span>
+          <span class="uppercase letter-spacing">Belgium</span>
+          <a target="_blank" href="http://epromo.fiat.com/BEFR_500MirrorFamily" class="uppercase letter-spacing">Fr</a>
+          <a target="_blank" href="http://epromo.fiat.com/BENL_500MirrorFamily" class="uppercase letter-spacing">Nl</a>
+        </span>
+        <span>
+          <span class="uppercase letter-spacing">Switzerland</span>
+          <a target="_blank" href="http://promo.fiat.com/ch-de/fiat-500-mirror-special-01-18" class="uppercase letter-spacing">De</a>
+          <a target="_blank" href="http://promo.fiat.com/ch-fr/fiat-500-mirror-special-01-18" class="uppercase letter-spacing">Fr</a>
+          <a target="_blank" href="http://promo.fiat.com/ch-it/fiat-500-mirror-special-01-18" class="uppercase letter-spacing">It</a>
+        </span>
+        <span>
+          <a target="_blank" href="http://epromo.fiat.com/AT_500MirrorFamily" class="uppercase letter-spacing">Austria</a>
+        </span>
+      </p>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="footer-logos">
+          <table class="logos">
+            <tr>
+              <td class="border-right">
+                <a href="http://www.fiat.com/" target="_blank">
+                  <img src="img/logo-fiat-40.png" class="fiat-logo" />
+                </a>
+              </td>
+              <td>
+                <a target="blank" href="https://www.facebook.com/fiat" class="social-btn facebook-btn"><a>
+                <a target="blank" href="https://twitter.com/fiat" class="social-btn twitter-btn"><a>
+                <a target="blank" href="https://www.youtube.com/user/fiatontheweb" class="social-btn youtube-btn"><a>
+                <a target="blank" href="https://www.instagram.com/fiat/" class="social-btn instagram-btn"><a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="footer-links">
+          <p>
+          <a href="http://www.fiatpress.com/info/privacy">Privacy Policy</a>
+          <a class="cl-policy-link" href="javascript:void(0)">Cookie Policy</a>
+          <a href=http://www.fiatpress.com/info/privacy"">Legal Notes</a>
+          </p>
+          <p class="footer-copy">
+          © 2018 Fiat Chrysler Automobiles N.V.
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
