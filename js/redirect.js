@@ -28,7 +28,7 @@ var appConfig = {};
       location.href = 'ondemand.html';
     } else if (new Date().getTime() > appConfig.countdownEndUTC && !isLive) {
       location.href = 'live.html';
-    } else () {
+    } else {
       if ((isLive || isOnDemand) && new Date().getTime() < (appConfig.countdownEndUTC - 60000))  {
         location.href = 'index.html';
       }
