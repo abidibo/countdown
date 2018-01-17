@@ -2,24 +2,13 @@ var App = function () {
   this.init = function (rootElement) {
     this.rootElement = $(rootElement);
     this.storage = window.localStorage;
-    this.liveEndTime = 1516358800000;
-    this.difference = 1516357800000 - new Date().getTime();
+    this.difference = config.liveBeginUTC - new Date().getTime();
     // this.difference = new Date().getTime() + 68000 - new Date().getTime();
     this.render();
-
-    // @FIXME ŖEMOVEME
-    /*
-    var self = this;
-    $('.footer-copy').on('click', function () {
-      self.renderLoginForm();
-    })
-    */
   }
 
   this.render = function () {
-    if (new Date().getTime() > this.liveEndTime) {
-      location.href = 'ondemand.html';
-    } else if (this.difference > 0) {
+    if (this.difference > 0) {
       this.renderCountdown()
     } else {
       location.href = 'live.html';
