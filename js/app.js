@@ -27,9 +27,10 @@ var App = function () {
     var self = this;
     $('#main-content').append([title, $('<div />', {id: 'countdown-widget'})])
     var clock = $('#countdown-widget').FlipClock(this.difference/1000, {
-      clockFace: 'DailyCounter',
+      // clockFace: 'DailyCounter',
       countdown: true,
       showSeconds: false,
+      showDay: false,
       stop: function () {
         location.href='live.html';
         // self.renderLoginForm();

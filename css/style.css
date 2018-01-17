@@ -103,6 +103,15 @@ body.countdown .left-logo img,
 body.countdown .right-logo img {
   margin-top: 85px;
 }
+
+.flip-clock-divider.seconds {
+  display: none;
+}
+
+.flip-clock-divider.seconds + .flip,
+.flip-clock-divider.seconds + .flip + .flip {
+  display: none;
+}
 /* END countdown */
 
 /* BEGIN login form */
