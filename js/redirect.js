@@ -1,7 +1,15 @@
 var appConfig = {};
 (function () {
   // debug purposes
-  var DEV = /DEV/.test(location.hash);
+  if(/DEV/.test(location.hash)) {
+    window.localStorage.setItem('DEV', true);
+  }
+
+  if(/PROD/.test(location.hash)) {
+    window.localStorage.setItem('DEV', false);
+  }
+
+  var DEV = window.localStorage.getItem('DEV') && window.localStorage.getItem('DEV') === 'true';
 
   // var liveBeginUTC = 1516357800000;
   appConfig.countdownEndUTC = 1516262458000;
@@ -11,7 +19,9 @@ var appConfig = {};
   var isOnDemand = /ondemand/.test(location.pathname);
   var isLive = /live/.test(location.pathname);
 
+  console.log(!DEV);
   if (!DEV) {
+    console.log('ENTRO');
     if (new Date().getTime() > appConfig.liveEndUTC && !isOnDemand) {
       location.href = 'ondemand.hmtl';
     } else if (new Date().getTime() > appConfig.countdownEndUTC && !isLive) {

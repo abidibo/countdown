@@ -2,6 +2,7 @@ var AppLive = function () {
   this.init = function () {
     this.manageLanguageChoice();
     this.checkOfferSection();
+    this.enableComments();
   }
 
   this.manageLanguageChoice = function () {
@@ -22,5 +23,28 @@ var AppLive = function () {
     };
 
     setInterval(checkTime, 5000);
+  }
+
+  this.enableComments = function() {
+    $('#send-form').on('click', function () {
+      var name = $('#id-name').val();
+      var magazine = $('#id-magazine').val();
+
+      if(name || magazine) {
+        var data = {
+          title: 'FCA form',
+          content: name + ' || ' + magazine
+        };
+
+        $.ajax({
+          type: 'POST',
+          url: 'https://d1lpzqwpc3lk0a.cloudfront.net/notes/',
+          data: JSON.stringify(data),
+          success: function(data) { },
+          contentType: "application/json",
+          dataType: 'json'
+        });
+      }
+    })
   }
 }
