@@ -2,7 +2,7 @@ var App = function () {
   this.init = function (rootElement) {
     this.rootElement = $(rootElement);
     this.storage = window.localStorage;
-    this.difference = config.liveBeginUTC - new Date().getTime();
+    this.difference = appConfig.countdownEndUTC - new Date().getTime();
     // this.difference = new Date().getTime() + 68000 - new Date().getTime();
     this.render();
   }

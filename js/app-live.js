@@ -1,32 +1,26 @@
 var AppLive = function () {
   this.init = function () {
-    this.liveEndTime = 1516357800000;
-    this.setPressKitEvents();
+    this.manageLanguageChoice();
+    this.checkOfferSection();
   }
 
-  this.setPressKitEvents = function () {
-
-    var download = function (urls) {
-      $.each(urls, function (k, v) {
-        window.open(v);
-      })
-    }
-
-    $('#press-kit-download-all').on('click', function () {
-      var items = [];
-      $('.press-kit-download-items input[type=checkbox]').each(function (k, v) {
-        items.push($(v).attr('data-url'));
-      });
-      download(items);
-    });
-
-    $('#press-kit-download-selected').on('click', function () {
-      var items = [];
-      $('.press-kit-download-items input[type=checkbox]:checked').each(function (k, v) {
-        items.push($(v).attr('data-url'));
-      });
-      download(items);
-    })
+  this.manageLanguageChoice = function () {
+    var match = window.location.search.match(/lng=([^&]+)/);
+    var lng = match && match.length > 1 ? match[1] : 'en';
+    $('.choose-language li').removeClass('active');
+    $('.choose-language li.lng-' + lng).addClass('active');
   }
 
+  this.checkOfferSection = function () {
+    var interval;
+
+    var checkTime = function () {
+      if (new Date().getTime() > appConfig.liveBeginUTC) {
+        $('.discover').removeClass('hidden');
+        clearInterval(interval);
+      }
+    };
+
+    setInterval(checkTime, 5000);
+  }
 }
