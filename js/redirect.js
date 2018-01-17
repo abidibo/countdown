@@ -24,10 +24,14 @@ var appConfig = {};
   console.info('ms to live end', appConfig.liveEndUTC - new Date().getTime());
 
   if (!DEV) {
-    if (new Date().getTime() > appConfig.liveEndUTC && !isOnDemand) {
-      location.href = 'ondemand.html';
-    } else if (new Date().getTime() > appConfig.countdownEndUTC && !isLive) {
-      location.href = 'live.html';
+    if (new Date().getTime() > appConfig.liveEndUTC) {
+      if (!isOnDemand) {
+        location.href = 'ondemand.html';
+      }
+    } else if (new Date().getTime() > appConfig.countdownEndUTC) {
+      if (!isLive) {
+        location.href = 'live.html';
+      }
     } else {
       if ((isLive || isOnDemand) && new Date().getTime() < (appConfig.countdownEndUTC - 60000))  {
         location.href = 'index.html';
