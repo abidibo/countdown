@@ -5,8 +5,9 @@ body {
 }
 body > header {
   background: url('../img/bg-mobile.jpg') no-repeat top center;
-  background-size: auto 300px;
+  background-size: auto 100%;
   margin-bottom: 30px;
+  padding-top: 20px;
 }
 
 body {
@@ -33,7 +34,8 @@ body {
 }
 
 .claim-desktop {
-  padding-top: 70px;
+  padding-top: 60px;
+  margin-bottom: 60px;
   display: none;
 }
 
@@ -211,8 +213,8 @@ body.login-form .main-content {
 /* desktop */
 @media only screen and (min-width: 1024px) {
   body > header {
-    background: url('../img/bg-mobile.jpg') no-repeat top center;
-    background-size: auto auto;
+    background: url('../img/bg-desktop.jpg') no-repeat top center;
+    background-size: auto 100%;
     margin-bottom: 30px;
   }
 

@@ -44,6 +44,9 @@ var AppLive = function () {
           contentType: "application/json",
           dataType: 'json'
         });
+
+        $('#id-name').val('');
+        $('#id-magazine').val('');
       }
     })
   }

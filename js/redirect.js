@@ -19,9 +19,7 @@ var appConfig = {};
   var isOnDemand = /ondemand/.test(location.pathname);
   var isLive = /live/.test(location.pathname);
 
-  console.log(!DEV);
   if (!DEV) {
-    console.log('ENTRO');
     if (new Date().getTime() > appConfig.liveEndUTC && !isOnDemand) {
       location.href = 'ondemand.hmtl';
     } else if (new Date().getTime() > appConfig.countdownEndUTC && !isLive) {

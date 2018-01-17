@@ -48,6 +48,10 @@ body > footer > a {
   background: url('../img/youtube-black.png') no-repeat center center;
 }
 
+.instagram-btn {
+  background: url('../img/instagram-black.png') no-repeat center center;
+}
+
 .footer-links {
   font-size: .8em;
   text-align: center;
