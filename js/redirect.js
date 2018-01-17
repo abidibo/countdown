@@ -25,11 +25,11 @@ var appConfig = {};
 
   if (!DEV) {
     if (new Date().getTime() > appConfig.liveEndUTC && !isOnDemand) {
-      location.href = 'ondemand.hmtl';
+      location.href = 'ondemand.html';
     } else if (new Date().getTime() > appConfig.countdownEndUTC && !isLive) {
-      location.href = 'live.hmtl';
-    } else {
-      if (isLive || isOnDemand) {
+      location.href = 'live.html';
+    } else () {
+      if ((isLive || isOnDemand) && new Date().getTime() < (appConfig.countdownEndUTC - 60000))  {
         location.href = 'index.html';
       }
     }

@@ -29,7 +29,7 @@ a {
  }
 
 body > header h1 {
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -37,6 +37,8 @@ body > header h1 {
 
 body > header .hash-tags b {
   font-size: .9em;
+  display: inline-block;
+  margin: 0 8px;
 }
 
 body > header table {
@@ -48,7 +50,7 @@ body > header td {
 }
 
 body > header table img {
-  width: 60px;
+  width: 90px;
 }
 .live-player {
   margin-top: 30px;
@@ -119,6 +121,7 @@ body > header table img {
 .discover {
   border-bottom: 1px solid #c6274f;
   margin-bottom: 30px;
+  margin: 30px 0;
   padding: 40px 16px;
 }
 
@@ -174,6 +177,10 @@ body > header table img {
 }
 
 @media only screen and (min-width: 1024px) {
+  body > header h1 {
+    font-size: 20px;
+  }
+
   body > header table {
     width: auto;
     margin: auto;
@@ -201,6 +208,9 @@ body > header table img {
 
   #mediaspace {
     margin: auto;
+    border-top: 1px solid #0084b8;
+    border-left: 1px solid #0084b8;
+    border-right: 1px solid #0084b8;
   }
 
   .border-vertical {

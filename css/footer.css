@@ -67,6 +67,10 @@ body > footer > a {
   font-size: .9em;
 }
 
+.logos td.border-right img {
+  margin-top: -5px;
+}
+
 @media only screen and (min-width: 1024px) {
   body > footer {
     border-top: 2px solid #ca3159;
