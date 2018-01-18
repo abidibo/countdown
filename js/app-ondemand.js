@@ -24,7 +24,7 @@ var AppOnDemand = function () {
 
         $.ajax({
           type: 'POST',
-          url: 'https://d1lpzqwpc3lk0a.cloudfront.net/notes/',
+          url: 'https://500mirrorfamily.fcagroup.com/notes/',
           data: JSON.stringify(data),
           success: function(data) { },
           contentType: "application/json",

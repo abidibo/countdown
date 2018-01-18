@@ -12,9 +12,9 @@ var appConfig = {};
   var DEV = window.localStorage.getItem('DEV') && window.localStorage.getItem('DEV') === 'true';
 
   // var liveBeginUTC = 1516357800000;
-  appConfig.countdownEndUTC = 1516262458000;
-  appConfig.liveBeginUTC = new Date().getTime() + 4000;
-  appConfig.liveEndUTC = 1516358800000;
+  appConfig.countdownEndUTC = 1516356060000;
+  appConfig.liveBeginUTC = 1516357800000;
+  appConfig.liveEndUTC = 1516359600000;
 
   var isOnDemand = /ondemand/.test(location.pathname);
   var isLive = /live/.test(location.pathname);
