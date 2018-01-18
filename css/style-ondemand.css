@@ -52,6 +52,11 @@ body > header td {
 body > header table img {
   width: 90px;
 }
+
+.header-title {
+  font-size: 1em;
+}
+
 .live-player {
   margin-top: 30px;
   border-top: 2px solid #367086;
@@ -143,9 +148,10 @@ body > header table img {
   text-decoration: underline;
 }
 
-/* choose lasnguage */
+/* choose language */
 .choose-language {
   padding: 16px;
+  margin-bottom: 20px;
 }
 
 .choose-language > div {
@@ -168,7 +174,7 @@ body > header table img {
 }
 
 .choose-language ul li.active a {
-  border-bottom: 8px solid #c6274f;
+  border-bottom: 6px solid #c6274f;
 }
 
 .choose-language ul li img {
@@ -233,5 +239,9 @@ body > header table img {
 
   .discover {
     border-bottom: 0px solid;
+  }
+
+  .choose-language ul li img {
+    max-width: 70px;
   }
 }

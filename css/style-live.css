@@ -52,15 +52,15 @@ body > header td {
 body > header table img {
   width: 90px;
 }
+
+.header-title {
+  font-size: 1em;
+}
+
 .live-player {
   margin-top: 30px;
   border-top: 2px solid #367086;
   border-bottom: 2px solid #367086;
-}
-
-.press-kit {
-  padding: 40px 0;
-  text-align: center;
 }
 
 .press-kit-btn {
@@ -217,10 +217,10 @@ body > header table img {
   }
 
   #mediaspace {
+    margin: auto;
     border-top: 1px solid #0084b8;
     border-left: 1px solid #0084b8;
     border-right: 1px solid #0084b8;
-    margin: auto;
   }
 
   .border-vertical {
